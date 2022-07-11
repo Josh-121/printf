@@ -49,7 +49,7 @@ int _printf(const char *format, ...)
 		}
 		else if (format[i] == '%' && format[i + 1] == 'i')
 		{
-			argStr = _itoa(va_arg(ap, int));
+			argStr = myitoa(va_arg(ap, int));
 			_count(&counter, argStr);
 			_sprintf(argStr);
 			free(argStr);
@@ -57,7 +57,7 @@ int _printf(const char *format, ...)
 		}
 		else if (format[i] == '%' && format[i + 1] == 'd')
 		{
-			argStr = _itoa(va_arg(ap, int));
+			argStr = myitoa(va_arg(ap, int));
 			_count(&counter, argStr);
 			_sprintf(argStr);
 			free(argStr);

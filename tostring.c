@@ -1,6 +1,6 @@
 #include "main.h"
 
-char *_itoa(int num)
+char * myitoa(int num)
 {
 	int len = 0,pNum = num<0 ? -num : num ;
 	char *str= NULL  ;
