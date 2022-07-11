@@ -25,12 +25,12 @@ char * myitoa(int num)
 	}
 
 	else if(num<0){
+		int k;
 		str[0] = '-';
-		int i;
 		pNum = num * -1 ;
 		str[len+1]='\0';
-		for(i=len ; i>=1; i--){			
-			str[i]=(pNum%10)+'0';	
+		for(k=len ; k>=1; k--){			
+			str[k]=(pNum%10)+'0';	
 			pNum /=10 ;
 		}	
 	}
