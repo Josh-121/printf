@@ -1,4 +1,4 @@
-#include"main.h"
+#include "main.h"
 
 void _sprintf(const char *str)
 {
@@ -10,11 +10,12 @@ void _sprintf(const char *str)
 		len++;
 	}
 
-	newstr = malloc(sizeof(char)*(len + 1));
+	newstr = malloc(sizeof(char) * (len + 1));
 
-	if(newstr == NULL)
-		exit(1);
-	for(i = 0; str[i] != '\0'; i++)
+	if (newstr == NULL)
+		exit (1);
+
+	for (i = 0; str[i] != '\0'; i++)
 	{
 		newstr[i] = str[i];
 	}
