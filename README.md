@@ -1,1 +1,1 @@
-Together is oneness
+Team prroject
