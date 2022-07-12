@@ -23,5 +23,6 @@ void _sprintf(const char *str)
 	newstr[i] = '\0';
 
 	write(1, newstr, len);
+
 	free(newstr);
 }
