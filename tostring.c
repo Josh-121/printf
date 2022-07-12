@@ -1,3 +1,5 @@
+#include <stdlib.h>
+
 char *myitoa(int num)
 {
         int len = 0, pNum = num < 0 ? -num : num;
@@ -23,7 +25,7 @@ char *myitoa(int num)
                 for (i = len ; i > 0 ; i--)
                 {
                         str[i - 1] = (num % 10) + '0';
-                        num / = 10;
+                        num /= 10;
                 }
         }
 
