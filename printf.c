@@ -5,18 +5,18 @@
 int _printf(const char *format, ...)
 {
 	va_list ap;
-	int i = 0, len = 0, k, j, counter = 0;	
+	int i = 0, len = 0, k, j, counter = 0;
 	char *dest = NULL;
 	char *argStr;
-	
+
 	while (format[len] != '\0')
 		len++;
 
-	
+
 	dest = malloc(sizeof(char) * len);
 	if (dest == NULL)
 		exit(1);
-	
+
 
 	va_start(ap, format);
 	while (format[i] != '\0')
@@ -44,9 +44,9 @@ int _printf(const char *format, ...)
 		else if (format[i] == '%' && format[i + 1] == 's')
 		{
 			argStr = va_arg(ap, char *);
-            		_count(&counter, argStr);
-            		_sprintf(argStr);
-            		i += 2;
+			_count(&counter, argStr);
+			_sprintf(argStr);
+			i += 2;
 		}
 		else if (format[i] == '%' && format[i + 1] == 'i')
 		{
