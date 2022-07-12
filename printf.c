@@ -64,6 +64,15 @@ int _printf(const char *format, ...)
 			free(argStr);
 			i += 2;
 		}
+		else if (format[i] == '%' && format[i + 1] == 'b')
+                {
+                        argStr = myitoa(_tobinary(va_arg(ap, int)));
+                        _count(&counter, argStr);
+                        _sprintf(argStr);
+                        free(argStr);
+                        i += 2;
+                }
+
 		else
 		{
 			for (j = i, k = 0; format[j] != '\0' ; k++, j++, i++)
