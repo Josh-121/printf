@@ -37,3 +37,8 @@ FLAGS
 
 Input: printf("Flag: [%+ d]", 1230);
 Output: Flag: [+1230] => 13
+
+OCTAL
+
+Input: printf("Unsigned octal:[%o]", 6);
+Output: Unsigned octal:[6] => 18
