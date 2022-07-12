@@ -2,51 +2,44 @@
 
 char *myitoa(int num)
 {
-        int len = 0, pNum = num < 0 ? -num : num;
-        char *str = NULL;
+	char *str;
+	int i = 1, m, k = 0, len, power, keep;
+	len = num < 0 ? 3 : 2;
+	k = num < 0 ? 1 : 0;
+	num *= num < 0 ? -1 : 1;
 
-        while (pNum > 0)
-        {
-                pNum /= 10;
-                len++;
-        }
+	keep = num;
+	
 
-        str = malloc(sizeof(char) * (len + 2));
-                if (str == NULL)
-                {
-                        exit(1);
-                }
+	while (keep > 9)
+	{
+		keep /= 10;
+		len++;
+	}
 
-        if (num > 0)
-        {
-                int i;
+	power = len - 2;
 
-                str[len] = '\0';
-                for (i = len ; i > 0 ; i--)
-                {
-                        str[i - 1] = (num % 10) + '0';
-                        num /= 10;
-                }
-        }
+	str = malloc(sizeof(char) * len);
+	if (str == NULL)
+	{
+		exit (1);
+	}
+	else if (k == 1)
+	{
+		str[0] = '-';
+		power -= 1;
+	}
 
-        else if (num < 0)
-        {
-                int k;
-
-                str[0] = '-';
-                pNum = num * -1;
-                str[len + 1] = '\0';
-                for (k = len ; k >= 1; k--)
-                {
-                        str[k] = (pNum % 10) + '0';
-                        pNum /= 10;
-                }
-        }
-
-        else
-                str[0] = '0';
-        return (str);
-        free(str);
-
+	for (m = 0; m < power; m++)
+	{
+		i *= 10;
+	}
+	while (i >= 1)
+	{
+		str[k] = ((num / i) % 10) + '0';
+		i /= 10;
+		k++;
+	}
+	str[k] = '\0';
+	return (str);
 }
-
