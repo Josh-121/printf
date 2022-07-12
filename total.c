@@ -1,7 +1,7 @@
 
 
 /**
- * _count - counts the string 
+ * _count - counts the string
  * @ptr: counter
  * @str: string to count
  */
