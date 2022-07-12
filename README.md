@@ -27,3 +27,8 @@ Decimal:
 
 Input: _printf("%d\n", 1000);
 Output: 1000
+
+Rot13
+
+Input: _printf("Unknown:[%R]\n", "HELLO WORLD");
+Output: URYYB JBEYQ
