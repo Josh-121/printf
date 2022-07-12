@@ -20,7 +20,7 @@ void _sprintf(const char *str)
 	newstr = malloc(sizeof(char) * (len + 1));
 
 	if (newstr == NULL)
-		exit(1);
+		exit (1);
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
@@ -29,6 +29,5 @@ void _sprintf(const char *str)
 	newstr[i] = '\0';
 
 	write(1, newstr, len);
-
 	free(newstr);
 }
