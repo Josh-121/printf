@@ -1,34 +1,12 @@
-#include <stdio.h>
-int _tobinary(int num)
-{
+long int _tobinary(int n) {
+long int bin = 0;
+long int rem, i = 1;
 
-        int result=0;
-	int binary=0;
-	int len=0;
-
-	while(num != 0){
-	if((num%2) == 0)
-                result *= 10 ;
-        else{
-                result*=10 ;
-                result+=1 ;
-        }
-	len++ ;
-	num/=2 ;
-	}
-
-
-        while(len != 0){
-        if((result%10) == 0)
-                binary *= 10 ;
-        else{
-                binary*=10 ;
-                binary+=1 ;
-        }
-        len-- ;
-	result/=10 ;
-        }
-
-	
-	return binary;
+  while (n!=0) {
+    rem = n % 2;
+    n /= 2;
+    bin += rem * i;
+    i *= 10;
+  }
+  return bin;
 }

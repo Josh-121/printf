@@ -1,7 +1,8 @@
 #include <stdlib.h>
-char *myitoa(int num)
+char *myitoa(long int num)
 {
-        int len = 0, pNum = num < 0 ? -num : num;
+        long int len = 0;
+	long pNum = num < 0 ? -num : num;
         char *str = NULL;
 
         while (pNum > 0)
@@ -18,7 +19,7 @@ char *myitoa(int num)
 
         if (num > 0)
         {
-                int i;
+                long int i;
 
                 str[len] = '\0';
                 for (i = len ; i > 0 ; i--)
@@ -30,7 +31,7 @@ char *myitoa(int num)
 
         else if (num < 0)
         {
-                int k;
+                long int k;
 
                 str[0] = '-';
                 pNum = num * -1;

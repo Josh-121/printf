@@ -26,8 +26,8 @@ int main(void)
     len2 = printf("Percent:[%%]\n");
     _printf("Len:[%d]\n", len);
     printf("Len:[%d]\n", len2);
-    printf("%d\n",_tobinary(5));
-    printf("%d\n",_tobinary(256));
+    _printf("%b\n",5);
+    _printf("%b\n",1024);
     _printf("Unknown:[%r]\n","yess");
     return (0);
 }
