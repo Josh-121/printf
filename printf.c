@@ -101,6 +101,6 @@ int _printf(const char *format, ...)
 			_sprintf(dest);
 		}
 	}
-
+	va_end(ap);
 	return (counter);
 }
