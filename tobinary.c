@@ -1,4 +1,5 @@
-long int _tobinary(int n) {
+long int _tobinary(int n)
+{
 long int bin = 0;
 long int rem, i = 1;
 
