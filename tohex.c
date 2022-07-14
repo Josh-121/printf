@@ -20,6 +20,4 @@ void _tohex(long number)
 
     for (i = j; i >= 0; i--)
             _putchar(hexadecimalnum[i]);
-    for (i = j; i >= 0; i--)
-            _putchar(hexadecimalnum[i]);
 }

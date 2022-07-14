@@ -16,10 +16,6 @@ void _tobinary(int num)
         for(j=(i-1) ; j>=0 ; j--)
         {
         _printf("%d",binary[j]);
-        }
-	for(j=(i-1) ; j>=0 ; j--)
-        {
-        _printf("%d",binary[j]);
-        }
+       }
 
 }
