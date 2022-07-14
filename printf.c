@@ -27,7 +27,7 @@ int _printf(const char *format, ...)
 			argStr[0] = (char)va_arg(ap, int);
 			argStr[1] = '\0';
 			_count(&counter, argStr);
-			_sprintf(argStr);
+			_putchar(argStr[0]);
 			free(argStr);
 			i += 2;
 		}
@@ -37,31 +37,23 @@ int _printf(const char *format, ...)
 			argStr[0] = '%';
 			argStr[1] = '\0';
 			_count(&counter, argStr);
-			_sprintf(argStr);
+			_putchar('%');
 			free(argStr);
 			i += 2;
 		}
 		else if (format[i] == '%' && format[i + 1] == 's')
 		{
-			argStr = va_arg(ap, char *);
-			_count(&counter, argStr);
-			_sprintf(argStr);
+			_sprintf(va_arg(ap, char *));
 			i += 2;
 		}
 		else if (format[i] == '%' && format[i + 1] == 'i')
 		{
-			argStr = myitoa(va_arg(ap, int));
-			_count(&counter, argStr);
-			_sprintf(argStr);
-			free(argStr);
+			myitoa(va_arg(ap, int));
 			i += 2;
 		}
 		else if (format[i] == '%' && format[i + 1] == 'd')
 		{
-			argStr = myitoa(va_arg(ap, int));
-			_count(&counter, argStr);
-			_sprintf(argStr);
-			free(argStr);
+			myitoa(va_arg(ap, int));
 			i += 2;
 		}
 		else if (format[i] == '%' && format[i + 1] == 'b')
