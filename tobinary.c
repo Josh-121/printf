@@ -1,22 +1,19 @@
 #include "main.h"
 void _tobinary(int num)
 {
-        int len=0;
-        int count=num;
-        int *binary=NULL;
+
+        int binary[64];
+	int result[64];
         int i=0;
-        int j=0;
-
-        while(count != 0){
-        len++ ;
-        count/=2 ;
+        int j;
+        int k=0;
+	for(j=0; j<64 ; j++)
+        {
+         result[j]=0;
         }
-        binary = malloc(len*sizeof(int));
 
-        if (binary == NULL)
-                exit (1);
-
-        while(num != 0){
+        while(num != 0)
+	{
         binary[i]=num%2 ;
         i++ ;
         num/=2 ;
@@ -24,7 +21,11 @@ void _tobinary(int num)
 
         for(j=(i-1) ; j>=0 ; j--)
         {
-        _printf("%d",binary[j]);
+        result[k]=binary[j];
+	k++;
         }
-        free(binary);
+	for(j=0; j<64 ; j++)
+        {
+        _printf("%d",result[j]);
+        }
 }
