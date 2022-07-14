@@ -19,6 +19,6 @@ void _tohex(long number)
     }
 
     for (i = j; i >= 0; i--)
-            _printf("%c",hexadecimalnum[i]);
+            _putchar(hexadecimalnum[i]);
   
 }

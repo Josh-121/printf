@@ -1,5 +1,5 @@
 #include "main.h"
-int *myitoa(long int num)
+char *myitoa(long int num)
 {
         long int len = 0;
 	long pNum = num < 0 ? -num : num;
@@ -43,11 +43,10 @@ int *myitoa(long int num)
                 }
         }
 
-        else{
+        else
                 str[0] = '0';
-	}
-	_printf("%s",str);
+
+	return str;
 	free(str);
-	return 0;
         	
 }

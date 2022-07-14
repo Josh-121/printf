@@ -7,6 +7,6 @@ void _sprintf(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		_printf("%c",str[i]);
+		_putchar(str[i]);
 	}
 }
