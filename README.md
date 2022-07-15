@@ -30,7 +30,6 @@ Output: 1000
 
 Rot13
 
-Input: _printf("Unknown:[%R]\n", "HELLO WORLD");
 
 
 WRITTEN BY: Olatubosun Ibitoye and Favour Wright
