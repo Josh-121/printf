@@ -43,8 +43,5 @@ OCTAL
 Input: printf("Unsigned octal:[%o]", 6);
 Output: Unsigned octal:[6] => 18
 
-Project Requirements
-
-
 
 WRITTEN BY: Olatubosun Ibitoye and Favour Wright
