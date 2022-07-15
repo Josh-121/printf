@@ -25,13 +25,6 @@ int _printf(const char *format, ...)
 			counter++ ;
 			i += 2;
 		}
-		else if (format[i] == '%' && format[i + 1] != '%')
-                {
-                        _putchar('%');
-                        counter++ ;
-                        i ++;
-                }
-
 		else if (format[i] == '%' && format[i + 1] == 's')
 		{
 			counter += _sprintf(va_arg(ap, char *));
