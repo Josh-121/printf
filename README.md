@@ -10,6 +10,6 @@ Some Examples
 
 Integer
 
-Input: _printf("There are %i do
+Input: _printf("There are %i
 
 WRITTEN BY: Olatubosun Ibitoye and Favour Wright
