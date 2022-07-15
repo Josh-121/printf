@@ -15,6 +15,6 @@ Output: There are 12 dozens in a gross
 
 Character
 
-Input: _printf("The first letter in the alphabet is %c\n", 
+Input: _printf("The first letter in the alpha
 
 WRITTEN BY: Olatubosun Ibitoye and Favour Wright
