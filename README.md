@@ -21,7 +21,6 @@ Output: The first letter in the alphabet is A
 String
 
 Input: _printf("%s\n", 'This is a string.');
-Output: This is a string.
 
 
 WRITTEN BY: Olatubosun Ibitoye and Favour Wright
