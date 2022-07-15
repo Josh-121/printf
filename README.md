@@ -8,7 +8,6 @@ contains the fucntion _printf, which uses the prototype int _printf(const char *
 
 Some Examples
 
-Integer
 
 
 WRITTEN BY: Olatubosun Ibitoye and Favour Wright
