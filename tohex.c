@@ -22,5 +22,5 @@ int _tohex(int number)
     
             _putchar(hexadecimalnum[i]);
     
-    return j;
+    return (j+1);
 }
