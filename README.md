@@ -8,5 +8,4 @@ contains the fucntion _printf, which uses the prototype int _printf(const char *
 
 
 
-
 WRITTEN BY: Olatubosun Ibitoye and Favour Wright
