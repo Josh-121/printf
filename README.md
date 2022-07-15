@@ -10,6 +10,5 @@ Some Examples
 
 Integer
 
-Input: 
 
 WRITTEN BY: Olatubosun Ibitoye and Favour Wright
