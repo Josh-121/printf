@@ -47,7 +47,6 @@ Project Requirements
 All files will be compiled on Ubuntu 20.04 LTS
 Programs and functions will be compiled with gcc using flags -Wall -Werror -Wextra and -pedantic
 Code must follow the [Betty] style
-Global variables are not allowed
 
 
 WRITTEN BY: Olatubosun Ibitoye and Favour Wright
