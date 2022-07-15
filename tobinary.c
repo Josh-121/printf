@@ -1,21 +1,13 @@
-#include "main.h"
-void _tobinary(int num)
-{
+long _tobinary(unsigned int n) {
+long bin = 0;
+long rem, i = 1;
 
-        long binary[100];
-        long i=0;
-        long j=0;
+  while (n!=0) {
+    rem = n % 2;
+    n /= 2;
+    bin += rem * i;
+    i *= 10;
+  }
 
-
-        while(num != 0){
-        binary[i]=num%2 ;
-        i++ ;
-        num/=2 ;
-        }
-
-        for(j=(i-1) ; j>=0 ; j--)
-        {
-        _printf("%d",binary[j]);
-       }
-
+  return bin;
 }
