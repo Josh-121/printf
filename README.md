@@ -10,6 +10,6 @@ Some Examples
 
 Integer
 
-Input: _printf
+Input: 
 
 WRITTEN BY: Olatubosun Ibitoye and Favour Wright
