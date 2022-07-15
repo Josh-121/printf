@@ -1,40 +1,28 @@
 
 #include <stdlib.h>
 char *rev_string(char *s)
+
 {
-	int i, j, k,len;
-	char c;
-	char *newstr;
+int begin, end, count = 0;
+char *r = NULL;
 
-	i = 0;
-	k = 0;
-	len = 0;
-	newstr = NULL;
+while (s[count] != '\0')
+      count++;
 
-	while (s[len] != '\0')
-	{
-		len++;
-	}
+r=malloc(sizeof(char) *(count+1));
 
-	newstr = malloc(sizeof(char) * (len + 1));
+if (r == NULL)
+      exit (1);
 
-	if (newstr == NULL)
-		exit (1);
+end = count - 1;
 
-	while (newstr[i] != '\0')
-	{
-		i++;
-	}
+for (begin = 0; begin < count; begin++)
+{
+      r[begin] = s[end];
+      end--;
+}
 
-	j = i - 1;
-	while (k < j)
-	{
-		c = newstr[j];
-		newstr[j] = newstr[k];
-		newstr[k] = c;
+r[begin] = '\0';
 
-		k++;
-		j--;
-	}
-	return(newstr);
+return(r);
 }

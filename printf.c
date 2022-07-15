@@ -39,9 +39,9 @@ int _printf(const char *format, ...)
                         counter+=_sprintf(myitoa(_tobinary(va_arg(ap, int))));
                         i += 2;
                 }
-		else if (format[i] == '%' && (format[i + 1] == 'x'||format[i + 1] == 'X'))
+	        else if (format[i] == '%' && (format[i + 1] == 'x'||format[i + 1] == 'X'))
                 {
-                        counter+=_tohex(va_arg(ap, int));
+                        counter += _tohex(va_arg(ap, int));
                         i += 2;
                 }
 		else if (format[i] == '%' && format[i + 1] == 'o')
@@ -53,10 +53,15 @@ int _printf(const char *format, ...)
 
 		 else if (format[i] == '%' && format[i + 1] == 'r')
                 {
-                        
+                        counter += _sprintf(rev_string(va_arg(ap, char *)));                        
                         i += 2;
                 }
 
+                else if (format[i] == '%' && format[i + 1] == 'R')
+                {
+                        counter += _sprintf(rot13(va_arg(ap, char *)));
+                        i += 2;
+                }
 
 		else
 		{

@@ -1,12 +1,11 @@
-
 #include "main.h"
 int _tohex(int number)
 {
     int quotient=number;
     int remainder;
-    int i, j;
+    int i, j=0;
     char hexadecimalnum[100];
-    
+
     while (quotient != 0)
     {
         remainder = quotient % 16;
@@ -17,10 +16,9 @@ int _tohex(int number)
         quotient = quotient / 16;
     }
 
-
     for (i = j; i >= 0; i--)
-    
+
             _putchar(hexadecimalnum[i]);
-    
+
     return (j+1);
 }

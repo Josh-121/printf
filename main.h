@@ -9,4 +9,5 @@ char *rev_string(char *s);
 char _putchar(char c);
 int _tohex(int number);
 int _octal(int decimalNumber);
+char *rot13(const char *src);
 #endif
