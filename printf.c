@@ -28,23 +28,18 @@ int _printf(const char *format, ...)
 			counter += _sprintf(va_arg(ap, char *));
 			i += 2;
 		}
-		else if (format[i] == '%' && format[i + 1] == 'i')
+		else if (format[i] == '%' && (format[i + 1] == 'i'||format[i + 1] == 'd'||format[i + 1] == 'u'))
 		{
 			counter += _sprintf(myitoa(va_arg(ap, int)));
 			i += 2;
 		}
-		else if (format[i] == '%' && format[i + 1] == 'd')
-		{
-			counter += _sprintf(myitoa(va_arg(ap, int)));
-                        i += 2;
-
-		}
+	
 		else if (format[i] == '%' && format[i + 1] == 'b')
                 {
                         counter+=_sprintf(myitoa(_tobinary(va_arg(ap, int))));
                         i += 2;
                 }
-		else if (format[i] == '%' && format[i + 1] == 'x')
+		else if (format[i] == '%' && (format[i + 1] == 'x'||format[i + 1] == 'X'))
                 {
                         counter+=_tohex(va_arg(ap, int));
                         i += 2;
