@@ -13,6 +13,6 @@ Integer
 Input: _printf("There are %i dozens in a gross\n", 12);
 Output: There are 12 dozens in a gross
 
-Charact
+Char
 
 WRITTEN BY: Olatubosun Ibitoye and Favour Wright
