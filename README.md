@@ -33,9 +33,6 @@ Rot13
 Input: _printf("Unknown:[%R]\n", "HELLO WORLD");
 Output: URYYB JBEYQ
 
-FLAGS
-
-
 
 
 
