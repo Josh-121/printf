@@ -35,7 +35,6 @@ Output: URYYB JBEYQ
 
 FLAGS
 
-Input: printf("Flag: [%+ d]", 1230);
 
 
 
