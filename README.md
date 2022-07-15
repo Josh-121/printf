@@ -8,4 +8,11 @@ contains the fucntion _printf, which uses the prototype int _printf(const char *
 
 Some Examples
 Integer
+
+Input: _printf("There are %i dozens in a gross\n", 12);
+Output: There are 12 dozens in a gross
+
+Character
+
+
 WRITTEN BY: Olatubosun Ibitoye and Favour Wright
