@@ -61,4 +61,9 @@ va_arg (man 3 va_arg)
 
 
 
+Mandatory Tasks
+ Write function that produces output with conversion specifiers c, s, and %.
+ Handle conversion specifiers d, i.
+ Create a man page for your function.
+
 WRITTEN BY: Olatubosun Ibitoye and Favour Wright
