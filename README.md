@@ -11,6 +11,6 @@ Some Examples
 Integer
 
 Input: _printf("There are %i dozens in a gross\n", 12);
-Output: There are 12 dozens
+Output: There are 12
 
 WRITTEN BY: Olatubosun Ibitoye and Favour Wright
