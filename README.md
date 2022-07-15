@@ -36,9 +36,7 @@ Output: URYYB JBEYQ
 FLAGS
 
 Input: printf("Flag: [%+ d]", 1230);
-Output: Flag: [+1230] => 13
 
-OCTAL
 
 
 
