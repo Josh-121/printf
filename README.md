@@ -44,7 +44,7 @@ Input: printf("Unsigned octal:[%o]", 6);
 Output: Unsigned octal:[6] => 18
 
 Project Requirements
-All files will be compiled on Ubuntu 20.04 LTS
+
 
 
 WRITTEN BY: Olatubosun Ibitoye and Favour Wright
