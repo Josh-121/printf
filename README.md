@@ -15,6 +15,4 @@ Output: There are 12 dozens in a gross
 
 Character
 
-
-
 WRITTEN BY: Olatubosun Ibitoye and Favour Wright
