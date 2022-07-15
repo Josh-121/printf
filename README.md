@@ -15,6 +15,6 @@ Output: There are 12 dozens in a gross
 
 Character
 
-Input: _printf
+
 
 WRITTEN BY: Olatubosun Ibitoye and Favour Wright
