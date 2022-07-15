@@ -5,103 +5,64 @@
 int _printf(const char *format, ...)
 {
 	va_list ap;
-	int i = 0, len = 0, k, j, counter = 0;
-	char *dest = NULL;
-	char *argStr;
-
-	while (format[len] != '\0')
-		len++;
-
-
-	dest = malloc(sizeof(char) * len);
-	if (dest == NULL)
-		exit(1);
-
-
+	int i = 0, counter = 0;
+	
+	
 	va_start(ap, format);
 	while (format[i] != '\0')
 	{
 		if (format[i] == '%' && format[i + 1] == 'c')
 		{
-			argStr = malloc(sizeof(char) * 2);
-			argStr[0] = (char)va_arg(ap, int);
-			argStr[1] = '\0';
-			_count(&counter, argStr);
-			_sprintf(argStr);
-			free(argStr);
-			i += 2;
+			_putchar((char)va_arg(ap, int));
+			counter++ ;
+			i+=2;
 		}
 		else if (format[i] == '%' && format[i + 1] == '%')
 		{
-			argStr = malloc(sizeof(char) * 2);
-			argStr[0] = '%';
-			argStr[1] = '\0';
-			_count(&counter, argStr);
-			_sprintf(argStr);
-			free(argStr);
+			_putchar('%');
+			counter++ ;
 			i += 2;
 		}
 		else if (format[i] == '%' && format[i + 1] == 's')
 		{
-			argStr = va_arg(ap, char *);
-			_count(&counter, argStr);
-			_sprintf(argStr);
+			counter += _sprintf(va_arg(ap, char *));
 			i += 2;
 		}
-		else if (format[i] == '%' && format[i + 1] == 'i')
+		else if (format[i] == '%' && (format[i + 1] == 'i'||format[i + 1] == 'd'||format[i + 1] == 'u'))
 		{
-			argStr = myitoa(va_arg(ap, int));
-			_count(&counter, argStr);
-			_sprintf(argStr);
-			free(argStr);
+			counter += _sprintf(myitoa(va_arg(ap, int)));
 			i += 2;
 		}
-		else if (format[i] == '%' && format[i + 1] == 'd')
-		{
-			argStr = myitoa(va_arg(ap, int));
-			_count(&counter, argStr);
-			_sprintf(argStr);
-			free(argStr);
-			i += 2;
-		}
+	
 		else if (format[i] == '%' && format[i + 1] == 'b')
                 {
-                        _tobinary(va_arg(ap, int));
+                        counter+=_sprintf(myitoa(_tobinary(va_arg(ap, int))));
                         i += 2;
                 }
-		else if (format[i] == '%' && format[i + 1] == 'x')
+		else if (format[i] == '%' && (format[i + 1] == 'x'||format[i + 1] == 'X'))
                 {
-                        _tohex(va_arg(ap, int));
+                        counter+=_tohex(va_arg(ap, int));
                         i += 2;
+                }
+		else if (format[i] == '%' && format[i + 1] == 'o')
+                {
+                        counter+=_sprintf(myitoa(_octal(va_arg(ap, int))));
+                        i += 2;
+
                 }
 
 		 else if (format[i] == '%' && format[i + 1] == 'r')
                 {
-                        argStr = rev_string(va_arg(ap, char *));
-                        _count(&counter, argStr);
-                        _sprintf(argStr);
-                        free(argStr);
+                        
                         i += 2;
                 }
 
 
 		else
 		{
-			for (j = i, k = 0; format[j] != '\0' ; k++, j++, i++)
-			{
-				if (format[j] == '%')
-				{
-					i = j;
-					break;
-				}
-				else
-				{
-					dest[k] = format[j];
-				}
-			}
-			dest[k] = '\0';
-			_count(&counter, dest);
-			_sprintf(dest);
+			_putchar(format[i]);
+			counter++;
+			i++;
 		}
 	}
 	va_end(ap);

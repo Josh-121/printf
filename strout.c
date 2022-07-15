@@ -1,7 +1,7 @@
 
 #include "main.h"
 
-void _sprintf(char *str)
+int _sprintf(char *str)
 {
 	int i;
 
@@ -9,4 +9,5 @@ void _sprintf(char *str)
 	{
 		_putchar(str[i]);
 	}
+	return i ;
 }

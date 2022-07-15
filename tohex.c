@@ -1,12 +1,11 @@
 
 #include "main.h"
-void _tohex(long number)
+int _tohex(int number)
 {
-    long quotient=number;
-    long remainder;
-    int i, j = 0;
+    int quotient=number;
+    int remainder;
+    int i, j;
     char hexadecimalnum[100];
-
     
     while (quotient != 0)
     {
@@ -18,6 +17,10 @@ void _tohex(long number)
         quotient = quotient / 16;
     }
 
+
     for (i = j; i >= 0; i--)
+    
             _putchar(hexadecimalnum[i]);
+    
+    return (j+1);
 }
