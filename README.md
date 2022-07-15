@@ -32,5 +32,10 @@ Rot13
 Input: _printf("Unknown:[%R]\n", "HELLO WORLD");
 Output: URYYB JBEYQ
 
+FLAGS
+
+Input: printf("Flag: [%+ d]", 1230);
+Output: Flag: [+1230] => 13
+
 
 WRITTEN BY: Olatubosun Ibitoye and Favour Wright
