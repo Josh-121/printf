@@ -25,7 +25,6 @@ Output: This is a string.
 
 Decimal:
 
-Input: _printf("%d\n", 1000);
 
 
 WRITTEN BY: Olatubosun Ibitoye and Favour Wright
