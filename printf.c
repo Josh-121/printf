@@ -41,7 +41,7 @@ int _printf(const char *format, ...)
                         counter+=_sprintf(myitoa(_tobinary(va_arg(ap, int))));
                         i += 2;
                 }
-		 else if (format[i] == '%' && format[i + 1] == '+' && (format[i + 2] == 'd'||format[i + 2] == 'i'))
+		 else if (format[i] == '%' && format[i + 1] == '+' && (format[i + 2] == 'd'||format[i + 2] == 'i'||format[i + 2] == 'u'))
                 {
               
 			_putchar('+');
@@ -49,6 +49,40 @@ int _printf(const char *format, ...)
                         i += 3;
 
                 }
+		else if (format[i] == '%' && format[i + 1] == '6' && (format[i + 2] == 'd'||format[i + 2] == 'i'||format[i + 2] == 'u'))
+                {
+                        counter += _sprintf(myitoa(va_arg(ap, int)));
+                        i += 3;
+
+                }
+		 else if (format[i] == '%' && format[i + 1] == '6' && format[i + 2]='b')
+                {
+                        counter+=_sprintf(myitoa(_tobinary(va_arg(ap, int))));
+                        i += 3
+
+                }
+                 else if (format[i] == '%' && format[i + 1] == '+' && format[i + 2] == 'b')
+                {
+			_putchar('+');
+                        counter+=_sprintf(myitoa(_tobinary(va_arg(ap, int))))+1;
+                        i += 3;
+
+                }
+                 else if (format[i] == '%' && format[i + 1] == '6' && format[i + 2] == 'o')
+                {
+                        _sprintf(myitoa(_octal(va_arg(ap, int))))
+                        i += 3;
+
+                }
+                 else if (format[i] == '%' && format[i + 1] == '+' && format[i + 2] == 'o')
+                {
+			_putchar('+');
+                        counter += _sprintf(myitoa(_octal(va_arg(ap, int))))+1;
+                        i += 3;
+
+                }
+
+
 
 	        else if (format[i] == '%' && (format[i + 1] == 'x'||format[i + 1] == 'X'))
                 {
